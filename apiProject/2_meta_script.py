@@ -19,8 +19,8 @@ url = f"https://graph.facebook.com/v19.0/{AD_ACCOUNT_ID}/insights"
 
 response = requests.get(url, params=params)
 
-data = response.json()
+data = response.json()["data"]
 
-df_meta_ads = pd.DataFrame(data["data"])
+df_meta_ads = pd.DataFrame(data)
 
 df_meta_ads
