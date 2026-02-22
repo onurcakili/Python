@@ -60,9 +60,9 @@ class TodoList:
         for task in filtered_tasks:
             status = "✓ Done" if task['completed'] else "○ Pending"
             priority_symbol = {
-                'High': '🔴',
-                'Medium': '🟡',
-                'Low': '🟢'
+                'High': 'A',
+                'Medium': 'B',
+                'Low': 'C'
             }.get(task['priority'], '')
             
             print(f"{task['id']:<5} {task['description']:<40} "
@@ -135,9 +135,9 @@ class TodoList:
         print(f"Pending: {pending}")
         print(f"Completion Rate: {completion_rate:.1f}%")
         print(f"\nPriority Breakdown:")
-        print(f"  🔴 High: {priority_count['High']}")
-        print(f"  🟡 Medium: {priority_count['Medium']}")
-        print(f"  🟢 Low: {priority_count['Low']}")
+        print(f"  A High: {priority_count['High']}")
+        print(f"  B Medium: {priority_count['Medium']}")
+        print(f"  C Low: {priority_count['Low']}")
         print('=' * 40)
     
     def save_to_file(self, filename='tasks.json'):
